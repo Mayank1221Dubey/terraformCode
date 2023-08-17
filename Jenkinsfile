@@ -21,7 +21,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 echo 'Terraform Initialization is In Progress!'
-                sh 'terraform plan -out myplan'
+                sh 'terraform plan -out tfplan.txt'
             }
         }
         stage('Approval') {
